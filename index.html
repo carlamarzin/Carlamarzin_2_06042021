@@ -1,4 +1,259 @@
 <!DOCTYPE html>
-<html>
-    
+<html lang="fr">
+
+
+<head>
+	<title>Reservia</title>
+	<meta charset="utf-8" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css" media="screen">
+
+</head>
+
+
+<body>
+	<div class="main">
+		<header class="header">
+			<img class="logo" src="images/logo/Reservia.svg" alt="Logo Reservia">
+			<nav class="headerNav">
+				<ul>
+					<li><a href=".hébergements">Hébergements</a></li>
+					<li><a href=".activites">Activités</a></li>
+					<li>S'inscrire</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="recherche"> 
+
+			<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+
+			<p>En plein centre ville ou en pleine nature</p>
+
+			<div class="barreDeRecherche">
+				<div class="boxIcon">
+					<!-- <label for="site-search">Search the site:</label> --> 
+					<svg class="icon">
+						<use xlink:href="#map-marker-alt-solid"></use>
+					</svg>
+				</div>
+				<input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Marseille, France">
+				<button class="buttonRechercher" type="button">Rechercher</button>
+			</div>
+
+			<form method="post" action="traitement.php" class="rechercheFiltres">
+				<div class="filtres">
+
+					<div class="pFiltres">Filtres</div>
+
+					<div class="filtreEconomique">
+						<div class="svgEconomique">
+							<svg class="icon">
+								<use xlink:href="images/icons/sprite.svg#money-bill-wave-solid"></use>
+							</svg>
+						</div>
+						<input type="checkbox" name="Économique" id="Économique">
+						<label for="Économique">Économique</label>
+					</div>
+
+					<div class="filtreFamilial">
+						<svg class="icon">
+							<use xlink:href="#child-solid"></use>
+						</svg>
+						<input type="checkbox" name="Familial" id="Familial">
+						<label for="Familial">Familial</label>
+					</div>
+
+					<div class="filtreRomantique">
+						<svg class="icon">
+							<use xlink:href="#heart-solid"></use>
+						</svg>
+						<input type="checkbox" name="Romantique" id="Romantique">
+						<label for="Romantique">Romantique</label>
+					</div>
+
+					<div class="filtreAnimaux">
+						<svg class="icon">
+							<use xlink:href="#dog-solid"></use>
+						</svg>
+						<input type="checkbox" name="animauxAutorisés" id="animauxAutorisés">
+						<label for="animauxAutorisés">Animaux autorisés</label>
+					</div>
+				</div>
+			</form>
+
+			<div class="rechercheInfo">
+				<!-- <svg class="icon">
+					<use xlink:href="#info-solid"></use>
+				</svg> -->
+				<span>Plus de 500 logements sont disponibles dans cette ville</span> 
+			</div>
+
+		</section>
+
+		<section class="hébergements">
+
+			<h1>Hébergements à Marseille</h1>
+
+			<div class="hébergementsArticles">
+
+				<article class="ALC">
+						<div class="AubergeLaCannebière">
+							<h3>Auberge La Cannebière</h3>
+							<p>Nuit à partir de <strong>25€</strong></p>
+						</div>
+				</article>
+
+				<article class="HDP">
+						<div class="HôtelDuPort">
+							<h3>Hôtel du Port</h3>
+							<p>Nuit à partir de <strong>52€</strong></p>		
+						</div>
+				</article>
+
+				<article class="HLM">
+						<div class="HôtelLesMouettes">
+							<h3>Hôtel Les Mouettes</h3>
+							<p>Nuit à partir de <strong>76€</strong></p>		
+						</div>
+				</article>
+
+				<article class="HDLM">
+						<div class="HôtelDeLaMer">
+							<h3>Hôtel de la Mer</h3>
+							<p>Nuit à partir de <strong>46€</strong></p>		
+						</div>
+				</article>
+
+				<article class="ALP">
+						<div class="AubergeLePanier">
+							<h3>Hôtel Le Panier</h3>
+							<p>Nuit à partir de <strong>46€</strong></p>		
+						</div>
+				</article>
+
+				<article class="HCA">
+						<div class="HôtelChezAmina">
+							<h3>Hôtel Chez Amina</h3>
+							<p>Nuit à partir de <strong>96€</strong></p>		
+						</div>
+				</article>
+			</div>
+
+			<p>Afficher plus</p>
+			
+		</section>
+
+		<aside class="populaires">
+			<h1>Les plus populaires</h1>
+			<!-- <svg class="icon"> 
+				<use xlink:href="#chart-line-solid"></use>
+
+				<a href="#" title="Hôtel Le Soleil Du Matin">
+					<a href="#" title="Au Coeur De L'Eau Chambres D'Hôtes">
+										<a href="#" title="Hôtel Tout Bleu Et Blanc">
+			</svg> -->
+
+			<article class="populairesHLSDM">
+				<div class="HôtelLeSoleilDuMatin">
+					<h3>Hôtel Le Soleil Du Matin</h3>
+					<p>Nuit à partir de <strong>128€</strong></p>			
+				</div>
+			</article>
+
+			<article class="populairesACDLCD">
+				<div class="AuCoeurDeLEauChambresDHotes">
+					<h3>Au Coeur De L'Eau Chambres D'Hôtes</h3>
+					<p>Nuit à partir de <strong>71€</strong></p>		
+				</div>
+			</article>
+
+			<article class="populairesHTBEB">
+				<div class="HôtelToutBleuEtBlanc">
+					<h3>Hôtel Tout Bleu Et Blanc</h3>
+					<p>Nuit à partir de <strong>68€</strong></p>		
+				</div>
+			</article>
+			
+		</aside>
+
+		<section class="activites">
+			<h1>Activités à Marseille</h1>
+
+			<article class="activitesVP">
+				<div class="VieuxPort">
+					<h3>Vieux Port</h3>
+				</div>
+			</article>
+
+			<article class="activitesFDPetIDF">
+				<article class="FDP">
+					<div class="FortDePomègues">
+						<h3>Fort de Pomègues</h3>
+					</div>
+				</article>
+
+				<article class="IDF">
+					<div class="IlesDuFrioul">
+						<h3>Îles du Frioul</h3>
+					</div>
+				</article>
+			</article>
+
+			<article class="activitesPNDC">
+				<div class="ParcNationalDesCalanques">
+					<h3>Parc National des Calanques</h3>
+				</div>
+			</article>
+
+			<article class="activitesNDDLGetPL">
+
+				<article class="NDDLG">
+						<div class="NotreDameDeLaGarde">
+							<h3>Notre-Dame-de-la-Garde</h3>
+						</div>
+				</article>
+			
+
+				<article class="PL">
+					<div class="ParcLongchamps">
+						<h3>Parc Longchamp</h3>
+					</div>
+				</article>
+			</article>
+
+		</section>
+
+		<footer class="footer">
+			<div class="footerContainer">
+				<div class="footerAPropos">
+					<h2>A propos</h2>
+					<ul>
+						<li>Fonctionnement du site</li>
+						<li>Conditions générales de vente</li>
+						<li>Données et confidentialité</li>
+					</ul>
+				</div>
+
+				<div class="footerNosHébergements">
+					<h2>Nos hébergements</h2>
+					<ul>
+						<li>Charte qualité</li>
+						<li>Soumettre votre hôtel</li>
+					</ul>
+				</div>
+
+				<div class="footerAssistance">
+					<h2>Assistance</h2>
+					<ul>
+						<li>Centre d'aide</li>
+						<li>Nous contacter</li>
+					</ul>
+				</div>
+			</div>
+			
+		</footer>
+	</div>
+</body>
 </html>

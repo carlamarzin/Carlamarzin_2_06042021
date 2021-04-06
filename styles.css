@@ -1,0 +1,495 @@
+body{
+	margin: 0;	
+	color: black;
+	font-family: Raleway, sans-serif;
+	font-size: 15px;
+}	
+
+
+/* Les couleurs sont : bleu #0065FC - bleu clair #DEEBFF - gris #F2F2F2 */
+
+
+/* Mise-en-page générale */
+
+.main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.header{
+	width: 1340px;
+	height: 130px;
+}
+
+.recherche{
+	width: 1340px;
+}
+
+.hébergements{
+	width: 800px;
+	height: 545px;
+	background-color: #F2F2F2;
+	border-radius: 20px;
+	padding: 40px;
+
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.populaires{
+	background-color: #F2F2F2;
+	border-radius: 20px;
+	padding: 40px;
+
+	width: 340px;
+	height: 545px;
+	justify-content: center;
+}
+
+.activites{
+	width: 1340px;
+	height: 550px;
+}
+
+.footer{
+	background-color: #F2F2F2;
+	width: 100%;
+	height: 220px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+/* Mise-en-page du Header */
+
+.logo{
+	float: left;
+}
+
+.headerNav{
+	float: right;
+}
+
+.logo, .headerNav{
+	margin-top: 40px;
+}
+
+.header ul{
+	display: flex;
+	flex-direction: row;
+
+	list-style: none;
+	text-decoration-line: none;
+}
+
+.headerNav li{
+	margin: 0 60px;
+}
+
+
+
+/* Mise-en-page de Recherche */
+
+
+.recherche h1 {
+	width: 100%;
+}
+
+.barreDeRecherche{
+	border: 1px solid #F2F2F2;
+	width: 420px;
+	height: 50px;
+	border-radius: 20px;
+
+	flex-direction: row;
+}
+
+.barreDeRecherche p{
+	margin: 0;
+	border-radius: 20px;
+}
+
+.barreDeRecherche input {
+	height: 100%;
+	width: 20px;
+}
+
+.boxIcon {
+	width: 50px;
+	height: 100%;
+	margin: 0;
+
+	background-color: #F2F2F2;
+	border-radius: 20px 0 0 20px;
+}
+
+.icon {
+	height: 25px;
+	width: 25px;
+}
+
+button{
+	height: 100%;
+	width: 130px;
+	background-color: #0065FC;
+	color: white;
+	font-family: Raleway;
+
+	border: 0;
+	border-radius: 0 20px 20px 0;
+	position: relative;
+	right: 0;
+}
+
+/*
+.button:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+.button:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+*/
+
+.filtres{
+	background-color: grey;
+	display: flex;
+	flex-direction: row;
+}
+
+
+.filtreEconomique, .filtreFamilial, .filtreRomantique, .filtreAnimaux {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	height: 46px;
+	border-radius: 25px;
+	margin: 25px;
+
+	background-color: white;
+	border: 2px solid #F2F2F2;
+}
+
+.rechercheFiltres svg{
+	height: 15px;
+	width: 15px;
+	background-color: #deebff;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+}
+
+
+/* Mise-en-page de la section "hébergements" 
+
+.hébergements h1, .hébergements p{
+	width: 100%;
+}
+
+
+
+*/
+
+.hébergements {
+	width: 800px;
+	justify-content: space-between;
+	margin-right: 40px;
+}
+
+.hébergements h1 {
+	margin-top: 0;
+}
+
+.hébergements p {
+	margin-bottom: 0;
+}
+
+.hébergementsArticles{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+
+	height: 440px;
+}
+.hébergements article{
+	background-color: white;
+	border: 5px solid white;
+	border-radius: 20px;
+	width: 235px;
+	height: 190px;
+	box-shadow: 5px 5px 10px #76787a;
+
+}
+
+
+.ALC {
+	background: url('images/hebergements/AubergeLaCAnebière.jpg') no-repeat;
+	background-size: contain;
+	background-position-y: -18px;
+	position: relative;
+	border-radius: 20px 20px 0 0;
+}
+
+.HDP {
+	background: url('images/hebergements/HotelDuPort.jpg') no-repeat;
+	background-size: contain;
+	background-position-y: -25px;
+	position: relative;
+	border-radius: 20px 20px 0 0;
+}
+
+.HLM {
+	background: url('images/hebergements/HotelLesMouettes.jpg') no-repeat;
+	background-size: contain;
+	background-position-y: -40px;
+	position: relative;
+	border-radius: 20px 20px 0 0;
+}
+
+.HDLM {
+	background: url('images/hebergements/HotelDeLaMer.jpg') no-repeat;
+	background-size: cover;
+	background-position-y: -85px;
+	position: relative;
+	border-radius: 20px 20px 0 0;
+}
+
+.ALP {
+	background: url('images/hebergements/AubergeLePanier.jpg') no-repeat;
+	background-size: contain;
+	position: relative;
+	border-radius: 20px 20px 0 0;
+}
+
+.HCA {
+	background: url('images/hebergements/HotelChezAmina.jpg') no-repeat;
+	background-size: cover;
+	background-position-y: -135px;
+	position: relative;
+	border-radius: 20px 20px 0 0;
+}
+
+.AubergeLaCannebière, .HôtelDuPort, .HôtelLesMouettes, .HôtelDeLaMer, .AubergeLePanier, .HôtelChezAmina {
+	width: 235px;
+	height: 75px;
+	background-color: white;
+	border: 0, 20px, 20px, 0;
+
+	position: absolute;
+	bottom: 0;
+}
+
+.hébergementsArticles h3, .hébergementsArticles p{
+	margin: 8px 8px 10px 20px;
+}
+
+
+/* Mise-en-page de la section "populaires" */
+
+.populaires article{
+	margin-bottom: 30px;
+}
+
+.populairesHLSDM {
+	background: url('images/hebergements/HotelLeSoleilDuMatin.jpg') no-repeat;
+	background-size: contain;
+	position: relative;
+
+	width: 330px;
+	height: 130px;
+	border-radius: 25px;
+	border: 4px solid white;
+	box-shadow: 5px 5px 10px #76787a;
+}
+
+.populairesACDLCD {
+	background: url('images/hebergements/AuCoeurDeLeau.jpg') no-repeat;
+	background-size: contain;
+	background-position-x: -50px;
+	position: relative;
+
+	width: 330px;
+	height: 130px;
+	border-radius: 25px;
+	border: 4px solid white;
+	box-shadow: 5px 5px 10px #76787a;
+}
+
+.populairesHTBEB {
+	background: url('images/hebergements/HotelToutBleuEtBlanc.jpg') no-repeat;
+	background-size: 39%;
+	background-position-y: -30px;
+	position: relative;
+
+	width: 330px;
+	height: 130px;
+	border-radius: 25px;
+	border: 4px solid white;
+	box-shadow: 5px 5px 10px #76787a;
+}
+
+.HôtelLeSoleilDuMatin {
+	background-color: white;
+	position: absolute;
+	right: 0;
+	border-radius: 0 20px 20px 0;
+	height: 100%;
+	width: 210px;
+}
+
+.AuCoeurDeLEauChambresDHotes {
+	background-color: white;
+	position: absolute;
+	right: 0;
+	border-radius: 0 20px 20px 0;
+	height: 100%;
+	width: 210px;
+}
+
+.HôtelToutBleuEtBlanc{
+	background-color: white;
+	position: absolute;
+	right: 0;
+	border-radius: 0 20px 20px 0;
+	height: 100%;
+	width: 210px;
+}
+
+.populaires p{
+	margin-left: 20px;
+}
+
+.populaires h3{
+	margin-left: 20px;
+}
+
+/* Mise-en-page de la section "activites" */
+
+.activites{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.activites h1{
+	width: 100%;
+}
+
+.activitesVP {
+	background: url('images/activites/VP.jpg') no-repeat;
+    position: relative;
+
+	width: 300px;
+	height: 450px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px #dadbdb;
+}
+
+.activitesPNDC {
+	background: url('images/activites/PDNC.jpg') no-repeat;
+    position: relative;
+
+	width: 300px;
+	height: 450px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px #dadbdb;
+}
+
+.FDP {
+	background: url('images/activites/FDP.jpg') no-repeat;
+	background-size: cover;
+	background-position-x: 0;
+	background-position-y: -150px;
+    position: relative;
+
+	width: 300px;
+	height: 250px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px #dadbdb;
+}
+
+.IDF {
+	background: url('images/activites/IDF.jpg') no-repeat;
+    background-size: cover;
+	background-position: bottom;
+	position: relative;
+
+	width: 300px;
+	height: 160px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px #dadbdb;
+}
+
+.NDDLG {
+	background: url('images/activites/NDDLG.jpg') no-repeat;
+	background-size: contain;
+    position: relative;
+
+	width: 300px;
+	height: 200px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px #dadbdb;
+}
+
+.PL {
+	background: url('images/activites/PL.jpg') no-repeat;
+	background-size: contain;
+	position: relative;
+
+	width: 300px;
+	height: 210px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px #dadbdb;
+}
+
+.VieuxPort, .ParcNationalDesCalanques, .FortDePomègues, .IlesDuFrioul, .NotreDameDeLaGarde, .ParcLongchamps {
+	position: absolute;
+	bottom: 0;
+	border-radius: 0 0 20px 20px;
+	background-color: white;
+	width: 100%;
+	height: 55px;
+}
+
+.activites h3 {
+	padding-left: 20px;
+	align-items: center;
+}
+
+.activitesVP, .activitesFDPetIDF, .activitesPNDC {
+	margin-bottom: 40px;
+	margin-right: 40px;
+}
+
+.FDP, .NDDLG {
+	margin-bottom: 40px;
+}
+
+/* Mise-en-page de footer */
+
+.footerContainer{
+	width: 1340px;
+	display: flex;
+}
+
+.footerAPropos, .footerNosHébergements, .footerAssistance{
+	margin-right: 200px;
+}
+
+.footer ul{
+	list-style: none;
+	padding-left: 0;
+}
+
+.footer h2{
+	margin: 16px 0;
+}
