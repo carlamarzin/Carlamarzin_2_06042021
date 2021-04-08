@@ -15,12 +15,12 @@
 <body>
 	<div class="main">
 		<header class="header">
-			<img class="logo" src="images/logo/Reservia.svg" alt="Logo Reservia">
+			<a href="index.html"><img class="logo" src="images/logo/Reservia.svg" alt="Logo Reservia"></a>
 			<nav class="headerNav">
 				<ul>
-					<li><a href=".hébergements">Hébergements</a></li>
-					<li><a href=".activites">Activités</a></li>
-					<li>S'inscrire</li>
+					<li><a href="#hébergements">Hébergements</a></li>
+					<li><a href="#activites">Activités</a></li>
+					<li><a href="#">S'inscrire</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -32,11 +32,8 @@
 			<p>En plein centre ville ou en pleine nature</p>
 
 			<div class="barreDeRecherche">
-				<div class="boxIcon">
-					<!-- <label for="site-search">Search the site:</label> --> 
-					<svg class="icon">
-						<use xlink:href="#map-marker-alt-solid"></use>
-					</svg>
+				<div class="boxIconMap">
+					<img src="images/icons/map-marker-alt-solid.svg">
 				</div>
 				<input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Marseille, France">
 				<button class="buttonRechercher" type="button">Rechercher</button>
@@ -48,35 +45,25 @@
 					<div class="pFiltres">Filtres</div>
 
 					<div class="filtreEconomique">
-						<div class="svgEconomique">
-							<svg class="icon">
-								<use xlink:href="images/icons/sprite.svg#money-bill-wave-solid"></use>
-							</svg>
-						</div>
+						<div class="boxIcon"><img src="images/icons/money-bill-wave-solid.svg" height="25px" width="25px"></div>
 						<input type="checkbox" name="Économique" id="Économique">
 						<label for="Économique">Économique</label>
 					</div>
 
 					<div class="filtreFamilial">
-						<svg class="icon">
-							<use xlink:href="#child-solid"></use>
-						</svg>
+						<div class="boxIcon"><img src="images/icons/child-solid.svg" height="25px" width="25px"></div>
 						<input type="checkbox" name="Familial" id="Familial">
 						<label for="Familial">Familial</label>
 					</div>
 
 					<div class="filtreRomantique">
-						<svg class="icon">
-							<use xlink:href="#heart-solid"></use>
-						</svg>
+						<div class="boxIcon"><img src="images/icons/heart-solid.svg" height="18px" width="18px"></div>
 						<input type="checkbox" name="Romantique" id="Romantique">
 						<label for="Romantique">Romantique</label>
 					</div>
 
 					<div class="filtreAnimaux">
-						<svg class="icon">
-							<use xlink:href="#dog-solid"></use>
-						</svg>
+						<div class="boxIcon"><img src="images/icons/dog-solid.svg" height="25px" width="25px"></div>
 						<input type="checkbox" name="animauxAutorisés" id="animauxAutorisés">
 						<label for="animauxAutorisés">Animaux autorisés</label>
 					</div>
@@ -84,143 +71,137 @@
 			</form>
 
 			<div class="rechercheInfo">
-				<!-- <svg class="icon">
-					<use xlink:href="#info-solid"></use>
-				</svg> -->
-				<span>Plus de 500 logements sont disponibles dans cette ville</span> 
+				<div class="boxInfo"><img src="images/icons/info-solid.svg" height="10px" width="10px"></div>
+				<p>Plus de 500 logements sont disponibles dans cette ville</p> 
 			</div>
 
 		</section>
 
-		<section class="hébergements">
+		<section class="hébergements" id="hébergement">
 
 			<h1>Hébergements à Marseille</h1>
 
 			<div class="hébergementsArticles">
 
-				<article class="ALC">
+				<a href="#"><article class="ALC">
 						<div class="AubergeLaCannebière">
 							<h3>Auberge La Cannebière</h3>
 							<p>Nuit à partir de <strong>25€</strong></p>
 						</div>
-				</article>
+				</article></a>
 
-				<article class="HDP">
+				<a href="#"><article class="HDP">
 						<div class="HôtelDuPort">
 							<h3>Hôtel du Port</h3>
 							<p>Nuit à partir de <strong>52€</strong></p>		
 						</div>
-				</article>
+				</article></a>
 
-				<article class="HLM">
+				<a href="#"><article class="HLM">
 						<div class="HôtelLesMouettes">
 							<h3>Hôtel Les Mouettes</h3>
 							<p>Nuit à partir de <strong>76€</strong></p>		
 						</div>
-				</article>
+				</article></a>
 
-				<article class="HDLM">
+				<a href="#"><article class="HDLM">
 						<div class="HôtelDeLaMer">
 							<h3>Hôtel de la Mer</h3>
 							<p>Nuit à partir de <strong>46€</strong></p>		
 						</div>
-				</article>
+				</article></a>
 
-				<article class="ALP">
+				<a href="#"><article class="ALP">
 						<div class="AubergeLePanier">
 							<h3>Hôtel Le Panier</h3>
 							<p>Nuit à partir de <strong>46€</strong></p>		
 						</div>
-				</article>
+				</article></a>
 
-				<article class="HCA">
+				<a href="#"><article class="HCA">
 						<div class="HôtelChezAmina">
 							<h3>Hôtel Chez Amina</h3>
 							<p>Nuit à partir de <strong>96€</strong></p>		
 						</div>
-				</article>
+				</article></a>
 			</div>
 
-			<p>Afficher plus</p>
+			<p><a href="#">Afficher plus</a></p>
 			
 		</section>
 
 		<aside class="populaires">
-			<h1>Les plus populaires</h1>
-			<!-- <svg class="icon"> 
-				<use xlink:href="#chart-line-solid"></use>
+			<div class="lesPlusPopulaires">
+				<h1>Les plus populaires</h1>
+				<img src="images/icons/chart-line-solid.svg" height="15px" width="15px">
+			</div>
 
-				<a href="#" title="Hôtel Le Soleil Du Matin">
-					<a href="#" title="Au Coeur De L'Eau Chambres D'Hôtes">
-										<a href="#" title="Hôtel Tout Bleu Et Blanc">
-			</svg> -->
-
-			<article class="populairesHLSDM">
+			<a href="#"><article class="populairesHLSDM">
 				<div class="HôtelLeSoleilDuMatin">
 					<h3>Hôtel Le Soleil Du Matin</h3>
 					<p>Nuit à partir de <strong>128€</strong></p>			
 				</div>
-			</article>
+			</article></a>
 
-			<article class="populairesACDLCD">
+			<a href="#"><article class="populairesACDLCD">
 				<div class="AuCoeurDeLEauChambresDHotes">
 					<h3>Au Coeur De L'Eau Chambres D'Hôtes</h3>
 					<p>Nuit à partir de <strong>71€</strong></p>		
 				</div>
-			</article>
+			</article></a>
 
-			<article class="populairesHTBEB">
+			<a href="#"><article class="populairesHTBEB">
 				<div class="HôtelToutBleuEtBlanc">
 					<h3>Hôtel Tout Bleu Et Blanc</h3>
 					<p>Nuit à partir de <strong>68€</strong></p>		
 				</div>
-			</article>
+			</article></a>
 			
 		</aside>
 
-		<section class="activites">
+		<section class="activites" id="activites">
 			<h1>Activités à Marseille</h1>
 
-			<article class="activitesVP">
+			<a href="#"><article class="activitesVP">
 				<div class="VieuxPort">
 					<h3>Vieux Port</h3>
 				</div>
-			</article>
+			</article></a>
 
 			<article class="activitesFDPetIDF">
-				<article class="FDP">
+				<a href="#"><article class="FDP">
 					<div class="FortDePomègues">
 						<h3>Fort de Pomègues</h3>
 					</div>
-				</article>
+				</article></a>
 
-				<article class="IDF">
+				<a href="#"><article class="IDF">
 					<div class="IlesDuFrioul">
 						<h3>Îles du Frioul</h3>
 					</div>
-				</article>
+				</article></a>
 			</article>
 
-			<article class="activitesPNDC">
+			<a href="#"><article class="activitesPNDC">
 				<div class="ParcNationalDesCalanques">
 					<h3>Parc National des Calanques</h3>
 				</div>
-			</article>
+			</article></a>
 
 			<article class="activitesNDDLGetPL">
 
-				<article class="NDDLG">
+				<a href="#"><article class="NDDLG">
 						<div class="NotreDameDeLaGarde">
 							<h3>Notre-Dame-de-la-Garde</h3>
 						</div>
-				</article>
+				</article></a>
 			
 
-				<article class="PL">
+				<a href="#"><article class="PL">
 					<div class="ParcLongchamps">
 						<h3>Parc Longchamp</h3>
 					</div>
-				</article>
+				</article></a>
 			</article>
 
 		</section>
@@ -230,25 +211,25 @@
 				<div class="footerAPropos">
 					<h2>A propos</h2>
 					<ul>
-						<li>Fonctionnement du site</li>
-						<li>Conditions générales de vente</li>
-						<li>Données et confidentialité</li>
+						<li><a href="#">Fonctionnement du site</a></li>
+						<li><a href="#">Conditions générales de vente</a></li>
+						<li><a href="#">Données et confidentialité</a></li>
 					</ul>
 				</div>
 
 				<div class="footerNosHébergements">
 					<h2>Nos hébergements</h2>
 					<ul>
-						<li>Charte qualité</li>
-						<li>Soumettre votre hôtel</li>
+						<li><a href="#">Charte qualité</a></li>
+						<li><a href="#">Soumettre votre hôtel</a></li>
 					</ul>
 				</div>
 
 				<div class="footerAssistance">
 					<h2>Assistance</h2>
 					<ul>
-						<li>Centre d'aide</li>
-						<li>Nous contacter</li>
+						<li><a href="#">Centre d'aide</a></li>
+						<li><a href="#">Nous contacter</a></li>
 					</ul>
 				</div>
 			</div>

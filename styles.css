@@ -1,10 +1,15 @@
 body{
-	margin: 0;	
+	margin: 0;
+	font-size: 15px;	
 	color: black;
-	font-family: Raleway, sans-serif;
-	font-size: 15px;
+	font-family: "Raleway", sans-serif;
 }	
 
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
 
 /* Les couleurs sont : bleu #0065FC - bleu clair #DEEBFF - gris #F2F2F2 */
 
@@ -19,7 +24,7 @@ body{
 
 .header{
 	width: 1340px;
-	height: 130px;
+	height: 100px;
 }
 
 .recherche{
@@ -34,8 +39,8 @@ body{
 	padding: 40px;
 
 	display: flex;
-	flex-wrap: wrap;
 	flex-direction: column;
+	justify-content: space-between;
 }
 
 .populaires{
@@ -45,7 +50,10 @@ body{
 
 	width: 340px;
 	height: 545px;
-	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
 }
 
 .activites{
@@ -64,7 +72,9 @@ body{
 	align-items: center;
 }
 
-
+h3{
+	font-size: 15px;
+}
 
 /* Mise-en-page du Header */
 
@@ -92,6 +102,40 @@ body{
 	margin: 0 60px;
 }
 
+.headerNav li:last-child{
+	color: #0065FC;
+	font-weight: bold;
+}
+
+/* 
+.headerNav li--blue:hover {
+    color: var(--color-blue);
+    border-top: 2px solid var(--color-blue);
+}
+
+
+.headerNav li--bold {
+    font-weight: 
+    color: var(--color-blue);
+}
+*/
+
+/* .headerNav li:hover {
+	content: '';
+	display: block;
+
+	width: 100px;
+	height: 4px;
+	background: #0065FC;
+}
+*/
+
+.headerNav li:hover {
+	color: #0065fc;
+	border-top: 2px solid #0065fc;
+  	padding-top: 21px;
+	font-weight: bold;
+}
 
 
 /* Mise-en-page de Recherche */
@@ -104,10 +148,10 @@ body{
 .barreDeRecherche{
 	border: 1px solid #F2F2F2;
 	width: 420px;
-	height: 50px;
+	height: 48px;
 	border-radius: 20px;
 
-	flex-direction: row;
+	display: inline-flex;
 }
 
 .barreDeRecherche p{
@@ -117,21 +161,33 @@ body{
 
 .barreDeRecherche input {
 	height: 100%;
-	width: 20px;
+	flex: auto;
+	border: none;
+	font-weight: bold;
+	color: black;
 }
 
-.boxIcon {
+
+.boxIconMap {
 	width: 50px;
 	height: 100%;
 	margin: 0;
 
 	background-color: #F2F2F2;
 	border-radius: 20px 0 0 20px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.icon {
-	height: 25px;
-	width: 25px;
+.boxIconMap img{
+	height: 18px;
+	width: 18px;
+}
+
+.barreDeRecherche ::placeholder {
+	padding-left: 10px;
 }
 
 button{
@@ -139,12 +195,17 @@ button{
 	width: 130px;
 	background-color: #0065FC;
 	color: white;
-	font-family: Raleway;
+	font-family: "Raleway";
+	font-weight: bold;
+	font-size: 15px;
 
 	border: 0;
 	border-radius: 0 20px 20px 0;
 	position: relative;
-	right: 0;
+}
+
+button:hover{
+	background-color: #1f79ff;
 }
 
 /*
@@ -160,9 +221,11 @@ button{
 */
 
 .filtres{
-	background-color: grey;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
+
+	font-weight: bold;
 }
 
 
@@ -176,28 +239,48 @@ button{
 	margin: 25px;
 
 	background-color: white;
-	border: 2px solid #F2F2F2;
+	border: 2px solid #d9d9d9;
 }
 
-.rechercheFiltres svg{
-	height: 15px;
-	width: 15px;
+.filtreEconomique:hover, .filtreFamilial:hover, .filtreRomantique:hover, .filtreAnimaux:hover {
+	background-color: #F2F2F2;
+}
+
+.filtres label{
+	margin-right: 20px;
+}
+
+.boxIcon{
 	background-color: #deebff;
 	width: 50px;
 	height: 50px;
 	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rechercheInfo{
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.boxInfo{
+	width: 20px;
+	height: 20px;
+	margin-right: 15px;
+	border: 1px solid #F2F2F2;
+	border-radius: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 
-/* Mise-en-page de la section "hébergements" 
 
-.hébergements h1, .hébergements p{
-	width: 100%;
-}
-
-
-
-*/
+/* Mise-en-page de la section "hébergements" */
 
 .hébergements {
 	width: 800px;
@@ -205,13 +288,11 @@ button{
 	margin-right: 40px;
 }
 
-.hébergements h1 {
+.hébergements h1, .hébergements p {
 	margin-top: 0;
-}
-
-.hébergements p {
 	margin-bottom: 0;
 }
+
 
 .hébergementsArticles{
 	display: flex;
@@ -227,7 +308,7 @@ button{
 	border-radius: 20px;
 	width: 235px;
 	height: 190px;
-	box-shadow: 5px 5px 10px #76787a;
+	box-shadow: 0px 5px 16px #0000002e;
 
 }
 
@@ -280,26 +361,49 @@ button{
 }
 
 .AubergeLaCannebière, .HôtelDuPort, .HôtelLesMouettes, .HôtelDeLaMer, .AubergeLePanier, .HôtelChezAmina {
-	width: 235px;
+	width: 237px;
 	height: 75px;
 	background-color: white;
-	border: 0, 20px, 20px, 0;
+	border-radius: 0 0 10px 10px;
 
 	position: absolute;
 	bottom: 0;
+	left: -1px;
 }
 
 .hébergementsArticles h3, .hébergementsArticles p{
-	margin: 8px 8px 10px 20px;
+	margin-left: 10px;
 }
+
+.hébergementsArticles h3{
+	margin-bottom: 4px;
+	margin-top: 10px;
+}
+
+.hébergementsArticles p{
+	font-size: 13px;
+}
+
 
 
 /* Mise-en-page de la section "populaires" */
 
-.populaires article{
-	margin-bottom: 30px;
+
+.lesPlusPopulaires {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
+.populaires h1{
+	margin: 0;
+}
+
+.lesPlusPopulaires img{
+	float: right;
+}
 .populairesHLSDM {
 	background: url('images/hebergements/HotelLeSoleilDuMatin.jpg') no-repeat;
 	background-size: contain;
@@ -309,7 +413,7 @@ button{
 	height: 130px;
 	border-radius: 25px;
 	border: 4px solid white;
-	box-shadow: 5px 5px 10px #76787a;
+	box-shadow: 0px 5px 16px #0000002e;
 }
 
 .populairesACDLCD {
@@ -322,7 +426,7 @@ button{
 	height: 130px;
 	border-radius: 25px;
 	border: 4px solid white;
-	box-shadow: 5px 5px 10px #76787a;
+	box-shadow: 0px 5px 16px #0000002e;
 }
 
 .populairesHTBEB {
@@ -335,7 +439,8 @@ button{
 	height: 130px;
 	border-radius: 25px;
 	border: 4px solid white;
-	box-shadow: 5px 5px 10px #76787a;
+	box-shadow: 0px 5px 16px #0000002e;
+	margin: 0;
 }
 
 .HôtelLeSoleilDuMatin {
@@ -386,22 +491,25 @@ button{
 
 .activitesVP {
 	background: url('images/activites/VP.jpg') no-repeat;
+	background-size: cover;
     position: relative;
 
 	width: 300px;
 	height: 450px;
 	border-radius: 20px;
-	box-shadow: 5px 5px 10px #dadbdb;
+	box-shadow: 0px 5px 16px #0000002e;
 }
 
 .activitesPNDC {
 	background: url('images/activites/PDNC.jpg') no-repeat;
+	background-size: cover;
+	background-position-x: -100px;;
     position: relative;
 
 	width: 300px;
 	height: 450px;
 	border-radius: 20px;
-	box-shadow: 5px 5px 10px #dadbdb;
+	box-shadow: 0px 5px 16px #0000002e;
 }
 
 .FDP {
@@ -414,7 +522,7 @@ button{
 	width: 300px;
 	height: 250px;
 	border-radius: 20px;
-	box-shadow: 5px 5px 10px #dadbdb;
+	box-shadow: 0px 5px 16px #0000002e;
 }
 
 .IDF {
@@ -426,7 +534,7 @@ button{
 	width: 300px;
 	height: 160px;
 	border-radius: 20px;
-	box-shadow: 5px 5px 10px #dadbdb;
+	box-shadow: 0px 5px 16px #0000002e;
 }
 
 .NDDLG {
@@ -437,18 +545,19 @@ button{
 	width: 300px;
 	height: 200px;
 	border-radius: 20px;
-	box-shadow: 5px 5px 10px #dadbdb;
+	box-shadow: 0px 5px 16px #0000002e;
 }
 
 .PL {
 	background: url('images/activites/PL.jpg') no-repeat;
-	background-size: contain;
+	background-size: cover;
+	background-position-y: -35px;
 	position: relative;
 
 	width: 300px;
 	height: 210px;
 	border-radius: 20px;
-	box-shadow: 5px 5px 10px #dadbdb;
+	box-shadow: 0px 5px 16px #0000002e;
 }
 
 .VieuxPort, .ParcNationalDesCalanques, .FortDePomègues, .IlesDuFrioul, .NotreDameDeLaGarde, .ParcLongchamps {
@@ -458,11 +567,14 @@ button{
 	background-color: white;
 	width: 100%;
 	height: 55px;
+
+	display: flex;
+	align-content: center;
 }
 
 .activites h3 {
 	padding-left: 20px;
-	align-items: center;
+	font-size: 15px;
 }
 
 .activitesVP, .activitesFDPetIDF, .activitesPNDC {
@@ -492,4 +604,13 @@ button{
 
 .footer h2{
 	margin: 16px 0;
+}
+
+.footer li{
+	margin: 15px 0;
+	text-decoration: none;
+}
+
+.footer li:hover {
+	text-decoration: underline;
 }
