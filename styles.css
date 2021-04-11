@@ -1,3 +1,4 @@
+
 body{
 	margin: 0;
 	font-size: 15px;	
@@ -11,7 +12,30 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
-/* Les couleurs sont : bleu #0065FC - bleu clair #DEEBFF - gris #F2F2F2 */
+/* Les couleurs sont : bleu #0065FC - bleu clair #DEEBFF - gris #<a href="#"></a><article class="activiteFDP">
+					<!-- <img src="images/activites/FDP.jpg">-->
+					<h3>Fort de Pomègues</h3>
+				</article></a>
+
+				<a href="#"><article class="activiteIDF">
+					<!--<img src="images/activites/IDF.jpg">-->
+					<h3>Îles du Frioul</h3>
+				</article></a>
+
+				<a href="#"><article class="activitesPNDC">
+					<!--<img src="images/activites/PDNC.jpg">-->
+					<h3>Parc National des Calanques</h3>
+				</article></a>
+
+				<a href="#"><article class="activiteNDDLG">
+					<!--<img src="images/activites/NDDLG.jpg">-->
+					<h3>Notre-Dame-de-la-Garde</h3>
+				</article></a>
+				
+				<a href="#"><article class="activitePL">
+					<!--<img src="images/activites/PL.jpg" alt=""> -->
+					<h3>Parc Longchamp</h3>
+				</article></a>  */
 
 
 /* Mise-en-page générale */
@@ -64,7 +88,6 @@ a:-webkit-any-link {
 .footer{
 	background-color: #F2F2F2;
 	width: 100%;
-	height: 220px;
 
 	display: flex;
 	flex-direction: row;
@@ -75,6 +98,19 @@ a:-webkit-any-link {
 h3{
 	font-size: 15px;
 }
+
+@media screen and (max-width: 1360px){
+	.header, .recherche, .activites {
+		width: 880px;
+	}
+}
+
+@media screen and (max-width: 950px){
+	.main{
+		padding: 20px;
+	}
+}
+
 
 /* Mise-en-page du Header */
 
@@ -278,6 +314,26 @@ button:hover{
 	align-items: center;
 }
 
+@media screen and (max-width: 1360px){
+	.filtres{
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
+	.pFiltres{
+		width: 800px;
+	}
+	.filtreAnimaux, .filtreEconomique, .filtreFamilial, .filtreRomantique {
+	 justify-content: space-between;
+	 margin: 20px 34px 5px 0;
+	}
+}
+
+@media screen and (max-width: 850px){
+	.recherche{
+		padding: 20px;
+	}
+}
+
 
 
 /* Mise-en-page de la section "hébergements" */
@@ -309,9 +365,7 @@ button:hover{
 	width: 235px;
 	height: 190px;
 	box-shadow: 0px 5px 16px #0000002e;
-
 }
-
 
 .ALC {
 	background: url('images/hebergements/AubergeLaCAnebière.jpg') no-repeat;
@@ -384,6 +438,25 @@ button:hover{
 	font-size: 13px;
 }
 
+@media screen and (max-width: 880px){
+	.hébergements{
+		height: 750px;
+		justify-content: center;
+		align-content: center;
+	}
+	.hébergementsArticles{
+		justify-content: center;
+		align-content: space-around;
+		height: 700px;
+	}
+	.hébergementsArticles article{
+		margin: 10px;
+	}
+	.hébergements h1{
+		align-items: center;
+	}
+}
+
 
 
 /* Mise-en-page de la section "populaires" */
@@ -441,6 +514,26 @@ button:hover{
 	border: 4px solid white;
 	box-shadow: 0px 5px 16px #0000002e;
 	margin: 0;
+}
+
+@media screen and (max-width: 1360px){
+	.lesPlusPopulaires, {
+		width: 100%;
+	}
+
+	.populaires{
+		width: 800px;
+		margin-top: 40px;
+		align-items: center;
+	}
+
+	.hébergements{
+		margin-right: 0;
+	}
+	.lesPlusPopulaires{
+		width: 330px;
+	}
+
 }
 
 .HôtelLeSoleilDuMatin {
@@ -586,6 +679,19 @@ button:hover{
 	margin-bottom: 40px;
 }
 
+@media screen and (max-width: 1360px) {
+	.activites{
+		justify-content: center;
+		height: 1080px;
+	}
+	.activitesFDPetIDF{
+		margin-right: 0;
+	}
+	.activites h1{
+		width: 645px;
+	}
+}
+
 /* Mise-en-page de footer */
 
 .footerContainer{
@@ -613,4 +719,36 @@ button:hover{
 
 .footer li:hover {
 	text-decoration: underline;
+}
+
+@media screen and (max-width: 1360px){
+	.footer{
+		width: 100%;
+		display: flex;
+
+	}
+	.footerContainer{
+		width: 880px;
+		margin: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.footerAPropos, .footerAssistance, .footerNosHébergements{
+		margin: 20px;
+	}
+}
+
+@media screen and (max-width: 880px){
+	.footerContainer{
+		justify-content: space-around;
+	}
+}
+
+@media screen and (max-width: 420px){
+	.footer{
+		width: 100%;
+	}
+	.footerContainer{
+		flex-direction: column;
+	}
 }
