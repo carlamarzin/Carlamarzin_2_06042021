@@ -22,7 +22,7 @@ a{
 /* MISE EN PAGE DU HEADER */
 /* MISE EN PAGE DU HEADER */
 
-.header{
+header{
   	max-width: 100%;
 	margin-right: 45px;
 	margin-left: 45px;
@@ -56,6 +56,9 @@ header img{
 
 	color: #0065FC;
 	font-weight: bold;
+}
+.sinscrire:hover{
+	transform: scale(1.05);
 }
 
 .headerNav a:hover {
