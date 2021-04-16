@@ -5,12 +5,12 @@
 <head>
 	<title>Reservia</title>
 	<meta charset="utf-8" />
-	<meta name="theme-color" content="#c62828" />
+	<meta name="theme-color" content="#fff" />
 	<meta name="HandheldFriendly" content="true" />
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
-	<meta name="keywords" content="Mobile, smartphones, developement, software, cameroon, website, it, application, world, tidou, webuywesell" />
-	<meta name="description" content="Your strategic partner in web development, mobile development, and IT support" />
-	<meta name="author" content="Nguetseng Stephane" />
+	<meta name="keywords" content="Reservia, outil, vacances, hébergement, activités, ville, planifier, organiser" />
+	<meta name="description" content="Reservia, plannifier votre voyage dans la ville de votre choix" />
+	<meta name="author" content="Carla Marzin" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="CSS/index.css" media="screen">
@@ -37,7 +37,10 @@
 					<img src="images/icons/map-marker-alt-solid.svg" alt="icone carte">
 				</div>
 				<input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Marseille, France">
-				<button class="buttonRechercher" type="button">Rechercher</button>
+				<button type="button">Rechercher</button>
+				<div class="logoLoupe">
+					<img src="images/icons/search-solid.svg" alt="icone billet">
+				</div>
 			</div>
 
 			<form method="post" action="traitement.php" class="rechercheFiltres">
@@ -88,7 +91,9 @@
 
 					<a href="#"><article class="ALC">
 							<div class="hébergementCarte">
-								<img class="hébergementImage" src="images/hebergements/AubergeLaCAnebière.jpg" alt="Une chambre de lAuberge la Canebière à Marseille">
+								<img srcset="images/hebergements/small/AubergeLaCAnebière.jpg 700w" 
+								sizes="(max-width: 700px) 700vw"
+								class="hébergementImage" src="images/hebergements/AubergeLaCAnebière.jpg" alt="Une chambre de lAuberge la Canebière à Marseille">
 								<div class="hébergementsTexte">
 									<h3>Auberge La Cannebière</h3>
 									<p>Nuit à partir de <strong>25€</strong></p>
@@ -105,7 +110,9 @@
 
 					<a href="#"><article class="HDP">
 							<div class="hébergementCarte">
-								<img class="hébergementImage" src="images/hebergements/HotelDuPort.jpg" alt="Une chambre de l'Hôtel du Port à Marseille">
+								<img srcset="images/hebergements/small/HotelDuPort.jpg 684w" 
+								sizes="(max-width: 700px) 700vw"
+								class="hébergementImage" src="images/hebergements/HotelDuPort.jpg" alt="Une chambre de l'Hôtel du Port à Marseille">
 								<div class="hébergementsTexte">
 									<h3>Hôtel du Port</h3>
 									<p>Nuit à partir de <strong>52€</strong></p>
@@ -122,7 +129,9 @@
 
 					<a href="#"><article class="HLM">
 							<div class="hébergementCarte">
-								<img class="hébergementImage" src="images/hebergements/HotelLesMouettes.jpg" alt="Une chambre de l'Hôtel des Mouettes à Marseille">
+								<img srcset="images/hebergements/small/HotelLesMouettes.jpg 750w" 
+								sizes="(max-width: 700px) 700vw"
+								class="hébergementImage" src="images/hebergements/HotelLesMouettes.jpg" alt="Une chambre de l'Hôtel des Mouettes à Marseille">
 								<div class="hébergementsTexte">
 									<h3>Hôtel Les Mouettes</h3>
 									<p>Nuit à partir de <strong>76€</strong></p>
@@ -139,7 +148,9 @@
 
 					<a href="#"><article class="HDLM">
 							<div class="hébergementCarte">
-								<img class="hébergementImage" src="images/hebergements/HotelDeLaMer.jpg" alt="Une chambre de l'Hôtel de la Mer à Marseille">
+								<img srcset="images/hebergements/small/HotelDeLaMer.jpg 500w" 
+								sizes="(max-width: 700px) 700vw"
+								class="hébergementImage" src="images/hebergements/HotelDeLaMer.jpg" alt="Une chambre de l'Hôtel de la Mer à Marseille">
 								<div class="hébergementsTexte">
 									<h3>Hôtel de la Mer</h3>
 									<p>Nuit à partir de <strong>46€</strong></p>	
@@ -156,7 +167,9 @@
 
 					<a href="#"><article class="ALP">
 							<div class="hébergementCarte">
-								<img class="hébergementImage" src="images/hebergements/AubergeLePanier.jpg" alt="Une chambre de l'Hôtel le Panier à Marseille">
+								<img srcset="images/hebergements/small/AubergeLePanier.jpg 652w" 
+								sizes="(max-width: 700px) 700vw"
+								class="hébergementImage" src="images/hebergements/AubergeLePanier.jpg" alt="Une chambre de l'Hôtel le Panier à Marseille">
 								<div class="hébergementsTexte">
 									<h3>Hôtel Le Panier</h3>
 									<p>Nuit à partir de <strong>46€</strong></p>
@@ -173,7 +186,9 @@
 
 					<a href="#"><article class="HCA">
 							<div class="hébergementCarte">
-								<img class="hébergementImage" src="images/hebergements/HotelChezAmina.jpg" alt="Une chambre de l'Hôtel chez Amina à Marseille">
+								<img srcset="images/hebergements/small/HotelChezAmina.jpg 486w" 
+								sizes="(max-width: 700px) 700vw"
+								class="hébergementImage" src="images/hebergements/HotelChezAmina.jpg" alt="Une chambre de l'Hôtel chez Amina à Marseille">
 								<div class="hébergementsTexte">
 									<h3>Hôtel Chez Amina</h3>
 									<p>Nuit à partir de <strong>96€</strong></p>
@@ -200,7 +215,9 @@
 				</div>
 
 				<a href="#"><article class="populairesCarte">
-					<img class="populairesImage" src="images/hebergements/HotelLeSoleilDuMatin.jpg" alt="Une chambre de l'Hôtel le Soleil du Matin à Marseille">
+					<img srcset="images/hebergements/small/HotelLeSoleilDuMatin.jpg 532w" 
+					sizes="(max-width: 700px) 700vw"
+					class="populairesImage" src="images/hebergements/HotelLeSoleilDuMatin.jpg" alt="Une chambre de l'Hôtel le Soleil du Matin à Marseille">
 					<div class="populairesTexte">
 						<h3>Hôtel Le Soleil Du Matin</h3>
 						<p>Nuit à partir de <strong>128€</strong></p>	
@@ -215,7 +232,9 @@
 				</article></a>
 
 				<a href="#"><article class="populairesCarte">
-					<img class="populairesImage" src="images/hebergements/AuCoeurDeLeau.jpg" alt="Une chambre d'Hôtes Au coeur de l'Eau à Marseille">
+					<img srcset="images/hebergements/small/AuCoeurDeLeau.jpg 504w" 
+					sizes="(max-width: 700px) 700vw"
+					class="populairesImage" src="images/hebergements/AuCoeurDeLeau.jpg" alt="Une chambre d'Hôtes Au coeur de l'Eau à Marseille">
 					<div class="populairesTexte">
 						<h3>Au Coeur De L'Eau Chambres D'Hôtes</h3>
 						<p>Nuit à partir de <strong>71€</strong></p>
@@ -230,7 +249,9 @@
 				</article></a>
 
 				<a href="#"><article class="populairesCarte">
-					<img class="populairesImage" src="images/hebergements/HotelToutBleuEtBlanc.jpg" alt="Une chambre de l'Hôtel Tout Bleu et Blanc à Marseille">
+					<img srcset="images/hebergements/small/HotelToutBleuEtBlanc.jpg 500w" 
+					sizes="(max-width: 700px) 700vw"
+					class="populairesImage" src="images/hebergements/HotelToutBleuEtBlanc.jpg" alt="Une chambre de l'Hôtel Tout Bleu et Blanc à Marseille">
 					<div class="populairesTexte">
 						<h3>Hôtel Tout Bleu Et Blanc</h3>
 						<p>Nuit à partir de <strong>68€</strong></p>
@@ -253,42 +274,54 @@
 
 				<a href="#" class="activiteVP">
 					<div>
-						<img src="images/activites/VP.jpg" alt="photographie du Vieux Port de Marseille">
+						<img srcset="images/activites/small/VP.jpg 702w" 
+						sizes="(max-width: 700px) 700vw"
+						src="images/activites/VP.jpg" alt="photographie du Vieux Port de Marseille">
 					</div>
 					<p>Vieux Port</p>
 				</a>
  
 				<a href="#" class="activiteFDP">
 					<div>
-						<img src="images/activites/FDP.jpg" alt="photographie du Fort de Pomègues de Marseille">
+						<img srcset="images/activites/smallFDP.jpg 356w" 
+						sizes="(max-width: 700px) 700vw"
+						src="images/activites/FDP.jpg" alt="photographie du Fort de Pomègues de Marseille">
 					</div>
 					<p>Fort de Pomègues</p>
 				</a>
 
 				<a href="#" class="activiteIDF">
 					<div>
-						<img src="images/activites/IDF.jpg" alt="photographie de l'Ile du Frioul">
+						<img srcset="images/activites/small/IDF.jpg 648w" 
+						sizes="(max-width: 700px) 700vw"
+						src="images/activites/IDF.jpg" alt="photographie de l'Ile du Frioul">
 					</div>
 					<p>Îles du Frioul</p>
 				</a>
 
 				<a href="#" class="activitesPNDC">
 					<div>
-						<img src="images/activites/PDNC.jpg" alt="photographie du Parc National des Calanques">
+						<img srcset="images/activites/small/PDNC.jpg 500w" 
+						sizes="(max-width: 700px) 700vw"
+						src="images/activites/PDNC.jpg" alt="photographie du Parc National des Calanques">
 					</div>
 					<p>Parc National des Calanques</p>
 				</a>
 
 				<a href="#"class="activiteNDDLG">
 					<div>
-						<img src="images/activites/NDDLG.jpg" alt="photographie de la cathédrale Notre-Dame-de-la-Garde de Marseille">
+						<img srcset="images/activites/small/NDDLG.jpg 606w" 
+						sizes="(max-width: 700px) 700vw"
+						src="images/activites/NDDLG.jpg" alt="photographie de la cathédrale Notre-Dame-de-la-Garde de Marseille">
 					</div>
 					<p>Notre-Dame-de-la-Garde</p>
 				</a>
 				
 				<a href="#" class="activitePL">
 					<div>
-						<img src="images/activites/PL.jpg" alt="photographie du Parc Longchamp à Marseille"> 
+						<img srcset="images/activites/small/PL.jpg 504w" 
+						sizes="(max-width: 700px) 700vw"
+						src="images/activites/PL.jpg" alt="photographie du Parc Longchamp à Marseille"> 
 					</div>
 					<p>Parc Longchamp</p>
 				</a>

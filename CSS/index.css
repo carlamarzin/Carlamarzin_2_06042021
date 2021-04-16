@@ -49,6 +49,7 @@ header{
     text-decoration: none;
 	text-align: center;
     padding-top: 35px;
+	padding-bottom: 35px;
 }
 
 .sinscrire{
@@ -94,10 +95,10 @@ header{
 
 	header .logo{
 		padding-left: 45px;
-		padding-bottom: 20px;
 	}
 	.sinscrire{
 		padding-right: 45px;
+		padding-top: 0;
 		text-align: right;
 		align-content: center;
 	}
@@ -191,11 +192,14 @@ button{
 	color: white;
 	font-family: "Raleway";
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 1rem;
 
 	border: 0;
 	border-radius: 0 20px 20px 0;
 	position: relative;
+}
+.barreDeRecherche img{
+	display: none;
 }
 
 button:hover{
@@ -275,7 +279,10 @@ button:hover{
 	margin-top: 3px;
 	margin-bottom: 0;
 }
-
+.boxInfo img{
+	width: 10px;
+	height: 10px;
+}
 .boxInfo{
 	width: 20px;
 	height: 20px;
@@ -296,6 +303,28 @@ button:hover{
 	}
 	.pFiltres{
 		width: 100%;
+	}
+}
+
+@media screen and (max-width: 750px){
+	.barreDeRecherche button{
+		display: none;
+	}
+	.barreDeRecherche img{
+		width: 15px;
+		height: 15px;
+	}
+	.barreDeRecherche .logoLoupe{
+		width: 55px;
+		height: 100%;
+		margin: 0;
+	
+		background-color: #1f79ff;
+		border-radius: 20px;
+	
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
@@ -334,7 +363,7 @@ button:hover{
 	margin-top: 40px;
 	margin-bottom: 0;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 1.2rem;
 }
 
 .hébergementCarte{
@@ -410,6 +439,11 @@ button:hover{
     background-color: #F2F2F2;
     padding: 40px 40px 5px 40px;
     border-radius: 20px;
+}
+
+.lesPlusPopulaires img{
+	width: 15px;
+	height: 15px;
 }
 
 .lesPlusPopulaires{
@@ -566,7 +600,7 @@ button:hover{
 	margin: 0;
 
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 1.1rem;
 
 }
 
@@ -624,7 +658,7 @@ footer{
     width: 100%;
     background-color: #F2F2F2;
 
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 .footerContainer{
