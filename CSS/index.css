@@ -14,6 +14,7 @@ body{
 
 a{
     text-decoration: none; 
+	color: black;
 }
 
 /* MISE EN PAGE DU HEADER */
@@ -46,6 +47,7 @@ header{
 }
 
 .navHébergements, .navActivités, .sinscrire{
+	border-top: 3px solid white;
     text-decoration: none;
 	text-align: center;
     padding-top: 35px;
@@ -61,8 +63,8 @@ header{
 }
 
 .navHébergements:hover, .navActivités:hover {
-	color: #0065fc;
 	border-top: 3px solid #0065fc;
+	color: #0065fc;
 	font-weight: bold;
 
 	transition: border-top .2s;
@@ -70,7 +72,7 @@ header{
 
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 768px){
 	header{
 		margin: 0 0 45px 0;
 		grid-template-columns: 1fr 1fr;
@@ -161,8 +163,14 @@ header{
 	border: none;
 	font-weight: bold;
 	color: black;
+	outline: none;
+	padding-left: 10px;
 }
 
+::placeholder{
+	color: black;
+}
+ 
 .boxIconMap {
 	width: 50px;
 	height: 100%;
@@ -170,19 +178,13 @@ header{
 
 	background-color: #F2F2F2;
 	border-radius: 20px 0 0 20px;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	text-align: center;
 }
 
 .boxIconMap img{
 	height: 18px;
 	width: 18px;
-}
-
-.barreDeRecherche ::placeholder {
-	padding-left: 10px;
+	margin-top: 14px;
 }
 
 button{
@@ -197,9 +199,6 @@ button{
 	border: 0;
 	border-radius: 0 20px 20px 0;
 	position: relative;
-}
-.barreDeRecherche img{
-	display: none;
 }
 
 button:hover{
@@ -219,6 +218,7 @@ button:hover{
 
 
 .filtreEconomique, .filtreFamilial, .filtreRomantique, .filtreAnimaux {
+	height: 50px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -261,7 +261,7 @@ button:hover{
 	align-items: center;
 
 	margin-right: 5px;
-	transform: translate3d(-2px, 0, 0);
+	transform: translate3d(-3px, 0, 0);
 }
 
 /* Information */
@@ -306,7 +306,7 @@ button:hover{
 	}
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 768px){
 	.barreDeRecherche button{
 		display: none;
 	}
@@ -325,6 +325,9 @@ button:hover{
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+	.barreDeRecherche{
+		width: 300px;
 	}
 }
 
@@ -463,7 +466,6 @@ button:hover{
 
 	height: 145px;
 	display: flex;
-	flex-direction: row;
 }
 
 .populairesImage {
@@ -478,12 +480,10 @@ button:hover{
 	background-color: teal;
 	width: 60%;
 	margin-left: 10px;
-
-	display: flex;
 	position: relative;
 }
 
-.populairesTexte h3, .populairesTexte p, .populairesTexte div{
+.populairesTexte h3, .populairesTexte p, .stars{
 	background-color: white;
     margin-left: 10px;
 	margin-top: 8px;
@@ -495,7 +495,7 @@ button:hover{
 	width: 13px;
 }
 .populairesText .stars{
-	position: absolute;
+	position: absolute !important;
 	bottom: 0;
 }
 
@@ -698,11 +698,12 @@ footer li:hover {
 	}
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 768px){
 	.footerContainer{
 		flex-direction: column;
 	}
 	.footerAPropos, .footerNosHébergements, .footerAssistance{
 		width: 100%;
 	}
+}
 	
