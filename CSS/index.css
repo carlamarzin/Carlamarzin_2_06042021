@@ -50,7 +50,7 @@ header{
 	border-top: 3px solid white;
     text-decoration: none;
 	text-align: center;
-    padding-top: 35px;
+    padding-top: 50px;
 	padding-bottom: 35px;
 }
 
@@ -74,33 +74,32 @@ header{
 
 @media screen and (max-width: 768px){
 	header{
-		margin: 0 0 45px 0;
+		margin: 0;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 
 		grid-template-areas: 
 			"logo sinscrire"
 			"hébergements activités";
+		
 	}	
 	.logo{
 		grid-area: logo;
+		padding-left: 20px;
 	}
 	.navHébergements{
 		grid-area: hébergements;
+		padding-top: 0 !important;
 	}
 	.navActivités{
 		grid-area: activités;
+		padding-top: 0 !important;
 	}
 	.sinscrire{
 		grid-area: sinscrire;
 	}
-
-	header .logo{
-		padding-left: 45px;
-	}
 	.sinscrire{
-		padding-right: 45px;
-		padding-top: 0;
+		padding-right: 20px;
 		text-align: right;
 		align-content: center;
 	}
@@ -130,7 +129,7 @@ header{
 
 
 .recherche{
-	margin: 25px 45px 0 45px;
+	margin: 0 45px;
 }
 
 /* Barre de recherche */
@@ -154,7 +153,7 @@ header{
 
 .barreDeRecherche p{
 	margin: 0;
-	border-radius: 20px;
+	border-radius: 15px;
 }
 
 .barreDeRecherche input {
@@ -177,7 +176,7 @@ header{
 	margin: 0;
 
 	background-color: #F2F2F2;
-	border-radius: 20px 0 0 20px;
+	border-radius: 15px 0 0 15px;
 	text-align: center;
 }
 
@@ -195,9 +194,10 @@ button{
 	font-family: "Raleway";
 	font-weight: bold;
 	font-size: 1rem;
+	outline: none;
 
 	border: 0;
-	border-radius: 0 20px 20px 0;
+	border-radius: 0 15px 15px 0;
 	position: relative;
 }
 
@@ -309,7 +309,16 @@ button:hover{
 @media screen and (max-width: 768px){
 
 	.recherche{
-		margin: 25px 20px 20px 20px;
+		margin: 25px 20px 0 20px;
+	}
+
+	.recherche h1{
+		font-size: 1.3rem;
+		margin-bottom: 15px;
+	}
+
+	.recherche p{
+		margin-bottom: 30px;
 	}
 
 	.barreDeRecherche button{
@@ -334,6 +343,11 @@ button:hover{
 	.barreDeRecherche{
 		width: 300px;
 	}
+
+	.pFiltres{
+		margin-bottom: 10px;
+	}
+
 }
 
 
@@ -366,6 +380,7 @@ button:hover{
 #hébergement h1 {
 	margin-bottom: 30px;
 	margin-top: 0;
+	font-size: 1.3rem;
 }
 .afficherPlus{
 	margin-top: 40px;
@@ -434,8 +449,7 @@ button:hover{
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(6, 1fr);
-		grid-column-gap: 30px;
-		grid-row-gap: 30px;
+		grid-row-gap: 12px;
 	}
 	#hébergements-wrapper{
 		padding: 0;
@@ -480,6 +494,7 @@ button:hover{
 
 	height: 145px;
 	display: flex;
+	position: relative;
 }
 
 .populairesImage {
@@ -490,11 +505,9 @@ button:hover{
     border-radius: 18px 0 0 18px ;
 }
 
-.populairesText{
-	background-color: teal;
+.populairesTexte{
 	width: 60%;
 	margin-left: 10px;
-	position: relative;
 }
 
 .populairesTexte h3, .populairesTexte p, .stars{
@@ -508,7 +521,7 @@ button:hover{
 	height: 13px;
 	width: 13px;
 }
-.populairesText .stars{
+.populairesTexte .stars{
 	position: absolute !important;
 	bottom: 0;
 }
@@ -516,6 +529,7 @@ button:hover{
 #populaires h1{
 	margin-top: 0;
 	margin-bottom: 30px;
+	font-size: 1.3rem;
 }
 
 #populaires article:hover {
@@ -536,6 +550,9 @@ button:hover{
 		width: 100%;
 		border-radius: 0px;
 	}
+	.populairesCarte{
+		margin-bottom: 10px;
+	}
 }
 
 
@@ -548,12 +565,17 @@ button:hover{
     clear: both;
 	height: 100%;
     padding: 0 45px;
-	margin: 45px 0;
+}
+
+#activites h1{
+	margin-left: 45px;
+	font-size: 1.3rem;
 }
 
 /*Grid*/
 
 .activitesGrid{
+	margin: 20px 45px 45px 45px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(5, 75px);
@@ -625,7 +647,7 @@ button:hover{
 	margin: 0;
 
 	font-weight: bold;
-	font-size: 1.1rem;
+	font-size: 1rem;
 
 }
 
@@ -662,10 +684,11 @@ button:hover{
 
 @media screen and (max-width: 768px){
 	.activitesGrid{
+		margin: 20px 20px 45px 20px;
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(6, 200px);
-		grid-gap: 30px;
+		grid-gap: 12px;
 		grid-template-areas: 
 		"activiteVP"
 		"activiteFDP"
@@ -676,9 +699,11 @@ button:hover{
 	}
 
 	#activites{
-		padding-right: 20px;
-		padding-left: 20px;
 		margin-bottom: 30px;
+	}
+
+	#activites h1{
+		margin-left: 20px;
 	}
 }
 
@@ -706,12 +731,17 @@ footer{
 	padding-right: 45px;
 }
 
+footer h2{
+	font-size: 1.1rem;
+	margin-top: 0;
+}
 footer ul{
     list-style: none;
     padding-left: 0;
 }
 
 footer li{
+	font-size: 0.9rem;
     line-height: 1.8;
     text-decoration: none;
 }
