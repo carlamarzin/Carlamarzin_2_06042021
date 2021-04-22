@@ -307,6 +307,11 @@ button:hover{
 }
 
 @media screen and (max-width: 768px){
+
+	.recherche{
+		margin: 25px 20px 20px 20px;
+	}
+
 	.barreDeRecherche button{
 		display: none;
 	}
@@ -424,13 +429,22 @@ button:hover{
 	}
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 768px){
 	.hébergementsArticles{
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: repeat(6, 1fr);
 		grid-column-gap: 30px;
 		grid-row-gap: 30px;
+	}
+	#hébergements-wrapper{
+		padding: 0;
+	}
+	#hébergement{
+		padding-right:20px;
+		padding-left: 20px;
+		margin-top: 0;
+		background-color: white;
 	}
 }
 
@@ -515,6 +529,17 @@ button:hover{
 		width: fit-content;
 	}
 }
+
+@media screen and (max-width: 768px){
+	#populaires{
+		padding: 30px 20px 5px 20px;
+		width: 100%;
+		border-radius: 0px;
+	}
+}
+
+
+#populaires
 
 /* MISE EN PAGE DE #ACTIVITES */
 /* MISE EN PAGE DE #ACTIVITES */
@@ -635,7 +660,7 @@ button:hover{
 	}
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 768px){
 	.activitesGrid{
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
@@ -648,6 +673,12 @@ button:hover{
 		"activitesPNDC"
 		"activiteNDDLG"
 		"activitePL";
+	}
+
+	#activites{
+		padding-right: 20px;
+		padding-left: 20px;
+		margin-bottom: 30px;
 	}
 }
 
@@ -701,6 +732,7 @@ footer li:hover {
 @media screen and (max-width: 768px){
 	.footerContainer{
 		flex-direction: column;
+		padding: 20px;
 	}
 	.footerAPropos, .footerNosHébergements, .footerAssistance{
 		width: 100%;
