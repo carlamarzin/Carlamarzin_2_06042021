@@ -321,6 +321,15 @@ button:hover{
 		margin-bottom: 30px;
 	}
 
+	.barreDeRecherche .logoLoupe{
+		border-radius: 15px;
+	}
+
+	.barreDeRecherche{
+		width: 100%;
+		margin-right: 25px;
+	}
+
 	.barreDeRecherche button{
 		display: none;
 	}
@@ -329,19 +338,15 @@ button:hover{
 		height: 15px;
 	}
 	.barreDeRecherche .logoLoupe{
-		width: 55px;
 		height: 100%;
-		margin: 0;
+		padding: 15px;
 	
 		background-color: #1f79ff;
-		border-radius: 20px;
+		border-radius: 15px;
 	
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-	.barreDeRecherche{
-		width: 300px;
 	}
 
 	.pFiltres{
@@ -377,7 +382,7 @@ button:hover{
 	font-size: 0.85rem;
 }
 
-#hébergement h1 {
+#hébergement h2 {
 	margin-bottom: 30px;
 	margin-top: 0;
 	font-size: 1.3rem;
@@ -428,7 +433,7 @@ button:hover{
 		padding-bottom: 0;
 	}
 	#hébergement{
-		width: fit-content;
+		width: 100%;
 		margin-top: 45px;
 	}
 
@@ -526,7 +531,7 @@ button:hover{
 	bottom: 0;
 }
 
-#populaires h1{
+#populaires h2{
 	margin-top: 0;
 	margin-bottom: 30px;
 	font-size: 1.3rem;
@@ -540,7 +545,7 @@ button:hover{
 
 @media screen and (max-width: 1370px){
 	#populaires{
-		width: fit-content;
+		width: 100%;
 	}
 }
 
